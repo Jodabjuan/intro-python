@@ -27,3 +27,19 @@ print(s4)
 
 s5 = "A\\in a String"
 print (s5)
+s6 = 'this is " wow '
+print (s6)
+
+
+# Raw Strings
+raw_string = r'C:\temp'
+print (raw_string)
+
+# String as sequence
+
+s = "parrot"
+# index notation 0,1,2,3,4,5,6  etc
+print("s[4]", s[4], type(s))
+
+# Capitalize the string
+print (s, s.capitalize())
