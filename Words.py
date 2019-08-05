@@ -7,12 +7,16 @@ Task 1: Count number of words in document
 from urllib.request import urlopen
 file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
 count = 0
-roster = {}
+data = {}
 
 with urlopen(file) as story:
     for line in story:
         words = line.decode('utf-8').split()
-        # print (words)
-        for word in words:
+        for word in words: # check to see if key already in dict.
+            if word in data:
+                data[word] += 1
+            else:
+                data[word] = 1
             count += 1
 print("Total number of words: ", count)
+print("Total data: ", data)
