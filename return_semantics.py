@@ -1,7 +1,7 @@
 """
 Learn about references and passing variables
 """
-
+import time
 
 def egg(var):
     """
@@ -25,13 +25,28 @@ def sum_two(num1, num2 = 8):
     return total
 
 
-def banner(message, border = "*"):
+def banner(message, spaces, border = "*"):
     """
     :param message: message banner
     :param border: character to use for border
     :return: message with border
     """
-    pass
+
+    bord = border * spaces + border * 4
+    mess = border + " " + message + " " + border
+    print(bord + "\n" + mess + "\n" + bord)
+
+
+def add_spam(menu=None):
+    """
+    Add spam to the menu list
+    :param menu:
+    :return: menu list
+    """
+    if menu is None:
+        menu = []
+    menu.append('spam')
+    return menu
 
 
 def main():
@@ -48,6 +63,20 @@ def main():
     sum_two(n1, n2)
     sum_two(n1)
 
+
+    msg = time.ctime()
+   # msg = input("Type a message: ")
+    bdr = "#"  #input("What character to use as border: ")
+    spc = len(msg)
+    #if bdr == "":
+    #    banner(msg,spc)
+    #else:
+    banner(msg,spc,bdr)
+
+    breakfast = ['eggs', 'bacon', 'toast']
+    print("before  ", breakfast)
+    add_spam(breakfast)
+    print("after ", breakfast)
 
 if __name__ == '__main__':
     main()
