@@ -20,7 +20,7 @@ def replace(g):
     :return: nothing
     """
     g =[17, 48, 89]
-    print ("G = ", g)
+    print("G = ", g)
 
 def replace_content(g):
     '''
@@ -42,13 +42,14 @@ def main():
     """
     m = [9, 15, 24]
     print("M-before = ", m)
+    print(len(m))
     modify(m)
     print("M-after = ", m)
     replace(m)
     print("M-after Replace = ", m)
     replace_content(m)
     print("M-after Rep_cont. = ", m)
-
+    print(len(m))
 
 if __name__ == '__main__':
     main()
