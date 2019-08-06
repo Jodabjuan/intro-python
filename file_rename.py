@@ -12,7 +12,7 @@ def rename_files():
     '''
     ispath = r"D:\prankOrig"
     files = os.listdir(ispath)  # returns list
-    saved_path = os.getcwd()
+    saved_path = os.getcwd() # save the current directory (folder)
     os.chdir(ispath)
     for file in files:
         # remove digits from name
@@ -21,7 +21,7 @@ def rename_files():
         # rename file to new_file
         os.rename(file, new_file)
 
-    os.chdir(saved_path)
+    os.chdir(saved_path)  # return to the saved (current folder)
 
 
 def main():
