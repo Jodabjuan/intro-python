@@ -17,6 +17,7 @@ def main():
         time.sleep(60*60)  #seconds
         webbrowser.open(video_address)
         counter += 1
+        print ("It is time to take a break, is: ", time.ctime())
 
 
 if __name__ == '__main__':
