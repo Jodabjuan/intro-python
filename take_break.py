@@ -14,7 +14,7 @@ def main():
     counter = 0
     while counter < 3:
         # delay for an hour
-        time.sleep(60*60)  #seconds
+        time.sleep(30*60)  #seconds
         webbrowser.open(video_address)
         counter += 1
         print ("It is time to take a break, is: ", time.ctime())
