@@ -22,6 +22,10 @@ def do_tuples():
     # Tuple does not require (   )
     t2 = 1, 2, 3, 5
     print(t2, type(t2))
+    t_from_1 = tuple(3,77,1)
+    print(t_from_1, type(t_from_1))
+    print(5 in (3, 6, 8, 5, 12))
+    print(5 not in (3, 6, 8, 5, 12))
 
 
 def min_max(items):
@@ -42,12 +46,6 @@ def swap(x1, x2):
     """
     return x2, x1
 
-def do_tuple():
-    t2 = 1, 2, 3, 5
-    print(t2, type(t2))
-    
-    print(5 in (3, 6, 8, 5, 12))
-    print(5 not in (3, 6, 8, 5, 12))
 
 
 def main():
