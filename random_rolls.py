@@ -5,6 +5,8 @@ import random
 import statistics
 
 
+
+
 def roll_die(num):
     '''
     Random roll of a die
@@ -31,10 +33,12 @@ def main():
     :return:
     """
     num = int(input("How many times to roll?"))
-    l = roll_die(num)
-    for roll, total in enumerate(l):
+    results = roll_die(num)
+    for roll, total in enumerate(results):
         print("Total rolls of {} = {}".format(roll + 1, total))
-
+    print("Average = {}".format(sum(results)/len(results)))
+    print("Mean = {}".format(statistics.mean(results)))
+    print("Median = {}".format(statistics.median(results)))
 
 
 if __name__ == '__main__':
