@@ -59,7 +59,7 @@ def main():
     pp(teams_nba)
 
     # Filter predicates
-    primes = [x for x in range(100001) if is_prime(x)]
+    primes = [x for x in range(10001) if is_prime(x)]
     print("Qty of primes: ", len(primes), " - ", primes)
 
 
