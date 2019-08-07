@@ -18,6 +18,28 @@ def main():
     # eliminate duplicates
     sdata = set(data)
     print(sdata, type(sdata))
+    for item in sdata:
+        print(item)
+    # Supports membership testing: in, not in
+    print(5 in sdata)
+    # Adding elements to sets:
+    sdata.add(45)
+    print(sdata)
+    sdata.update([2, 99, 44, 33, 1, 2, 88])  # Adds only unique values
+    print(sdata)
+    # Removing elements
+    # Remove() method: raises KeyError if not found
+    sdata.remove(44)
+    print(sdata)
+    # Discard() method: does not raise any error
+    sdata.discard(77)
+    print(sdata)
+
+    # Make a copy of set
+    wdata = sdata.copy()
+    print(wdata is sdata)
+    print(wdata == sdata)
+
 
 
 
