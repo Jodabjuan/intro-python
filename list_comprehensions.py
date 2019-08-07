@@ -6,7 +6,7 @@ from math import factorial, sqrt
 from pprint import pprint as pp
 
 
-def is_prime(num)
+def is_prime(num):
     """
     Is the number (num) prime
     :param num: number to test
@@ -17,6 +17,7 @@ def is_prime(num)
     for i in range(2, int(sqrt(num))+1):
         if num % i == 0:
             return False
+
     return True
 
 
@@ -58,8 +59,8 @@ def main():
     pp(teams_nba)
 
     # Filter predicates
-
-
+    primes = [x for x in range(100001) if is_prime(x)]
+    print("Qty of primes: ", len(primes), " - ", primes)
 
 
 
