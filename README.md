@@ -17,4 +17,4 @@ This is an introduction to Python.
     - Optional parameters
 - Tuples and unpacking tuples
 - Learned more about strings
-- N
+- Na
