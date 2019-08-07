@@ -22,6 +22,7 @@ def sqrt(x):
     Compute the square root using the method Heron of Alex
     :param x: Number to compute the sqrt
     :return: sqrt of x
+    :raise: ValueError() on ZeroDivisionError
     """
     guess = x
     i = 0
@@ -35,7 +36,6 @@ def sqrt(x):
     return guess
 
 
-
 def main():
     """
     Test function
@@ -44,9 +44,14 @@ def main():
     # print(convert("11"))
     # print(convert("Hello"))
     # print(convert([1, 4, 8]))
-    print(sqrt(9))
-    print(sqrt(11))
-    print(sqrt(-1))
+    try:
+        print(sqrt(9))
+        print(sqrt(11))
+        print(sqrt(-1))
+    except ValueError:
+        print("Cannot compute the value of negative numbers")
+
+    print("Done")
 
 
 if __name__ == '__main__':
