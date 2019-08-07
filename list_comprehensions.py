@@ -2,8 +2,23 @@
 List Comprehensions:
 Readable, expressive, and effective
 """
-from math import factorial
+from math import factorial, sqrt
 from pprint import pprint as pp
+
+
+def is_prime(num)
+    """
+    Is the number (num) prime
+    :param num: number to test
+    :return: True for prime # or False for not prime #
+    """
+    if num < 2:
+        return False
+    for i in range(2, int(sqrt(num))+1):
+        if num % i == 0:
+            return False
+    return True
+
 
 def main():
     """
@@ -37,6 +52,12 @@ def main():
     pp(info3)
 
     # Dictionary Comprehensions: {}
+    nba_teams = {'jazz':'SLC', 'warriors':'OAKLAND', 'lakers':"LA", 'clippers':"LA"} #key must be unique
+    pp(nba_teams)
+    teams_nba = {city:mascot for mascot, city in nba_teams.items()}
+    pp(teams_nba)
+
+    # Filter predicates
 
 
 
