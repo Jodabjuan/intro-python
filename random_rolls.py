@@ -7,7 +7,7 @@ import statistics
 
 
 
-def roll_die(num):
+def roll_die(roll):
     '''
     Random roll of a die
     :param num: number of rolls
@@ -17,7 +17,7 @@ def roll_die(num):
     '''
 
     freq = [0] * 6  # initial val to 0
-    for roll in range(10):
+    for roll in range(roll):
         # print(random.randrange(1, 7))
         n = random.randrange(1, 7)
         print(n)
