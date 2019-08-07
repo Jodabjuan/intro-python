@@ -40,6 +40,14 @@ def main():
     print(wdata is sdata)
     print(wdata == sdata)
 
+    ###### Define some sets
+    blue_eyes = {"Olivia", "Harry", "Lily", "Jack"}
+    blond_hair = {"Harry", "Jack", "Amelia", "Mia", "Joshua"}
+    smell_hcn = {"Harry", "Amelia"}
+    taste_ptc = {"Harry", "Lily", "Ameila", "Lola"}
+    o_blood = {"Lola", "Jack", }
+
+
 
 
 
