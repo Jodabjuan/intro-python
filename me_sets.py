@@ -31,6 +31,7 @@ def main():
     # Remove() method: raises KeyError if not found
     sdata.remove(44)
     print(sdata)
+
     # Discard() method: does not raise any error
     sdata.discard(77)
     print(sdata)
