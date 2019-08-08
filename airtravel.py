@@ -43,11 +43,12 @@ class Flight:
 
 class Aircraft:
 
-    def __init__(self, registration, model, numrows, seatsper):
+    def __init__(self, registration, model, numrows, seatsper, seatplan):
         self._registration = registration
         self._model = model
         self._numrows = numrows
         self._seatsper = seatsper
+        self._seatplan = seatplan
 
     def registration(self):
         return self._registration
@@ -60,6 +61,10 @@ class Aircraft:
 
     def seatsper(self):
         return self._seatsper
+
+    def seatplan(self):
+        return(range(1, self._numrows +1), "ABCDEFGHJK"[:self._seatsper])
+
 
 
 
