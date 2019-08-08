@@ -51,6 +51,7 @@ class Aircraft:
 
 
         rows, seats = self.seatplan()
+        self._seating = [None] + [{letter:None for letter in seats} for _ in rows]
 
     def registration(self):
         return self._registration
