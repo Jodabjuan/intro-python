@@ -69,6 +69,23 @@ class Flight:
             raise ValueError("Seat {} already taken".format(seat))
         self._seating[row][letter] = passenger
 
+    def num_available_seats(self):
+        return sum(sum(1 for s in row.values() if s is None)
+                   for row in self._seating if row is not None)
+
+    def make_boarding_class(self, card_printer):
+        for passenger, seat in sorted(self._passenger_seats()):
+            card_printer(passenger, seat, self.number(), self._aircraft.model())
+
+    def _passenger_seats(self):
+        row_numbers, seat_letters = self._aircraft.seatplan()
+        for row in row_numbers:
+            for letter in seat_letters:
+                passenger = self._seating[row][letter]
+                if passenger is not None:
+                    yield (passenger, "{}{}".format(row, letter))
+
+
 class Aircraft:
 
     def __init__(self, registration, model, numrows, seatsper):
@@ -76,8 +93,6 @@ class Aircraft:
         self._model = model
         self._numrows = numrows
         self._seatsper = seatsper
-
-
 
     def registration(self):
         return self._registration
@@ -93,10 +108,6 @@ class Aircraft:
 
     def seatplan(self):
         return(range(1, self._numrows +1), "ABCDEFGHJK"[:self._seatsper])
-
-
-
-
 
 
 def main():
