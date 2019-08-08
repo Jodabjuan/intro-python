@@ -15,7 +15,7 @@ def main():
     print(f2.number(), f2.airline())
 
     a1 = Aircraft("G-EUP", "Airbus A319",
-                  numrows=22, seatsper=3, seatplan=())
+                  numrows=22, seatsper=6)
     print(a1.registration(), a1.model())
     print(a1.seatplan())
 
