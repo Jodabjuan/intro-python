@@ -1,0 +1,54 @@
+"""
+An Flight Class. Model for aircraft flights
+"""
+
+
+class Flight:
+    """
+    A Flight with a particular passenger aircraft
+    """
+    def __init__(self, number):
+        """
+        Initializes Flight number
+        :param number: flight number
+        :raises: ValueError (For invalid format)
+        """
+        # Validate flight number:
+        # 5 digits  - AADDD  A=ALPHA  D=Digit
+        if len(number) != 5:
+            raise ValueError("Invalid Flight Number length."
+                             .format(number))
+        if not number[:2].isalpha():
+            raise ValueError("No airline code ()"
+                            .format(number))
+        if not number[:2].isupper():
+            raise ValueError("Invalid airline code ()"
+                             .format(number))
+        if not number[2:].isdigit():
+            raise ValueError("Invalid route code ()"
+                             .format(number))
+
+        self._number = number
+
+    def number(self):
+        """
+        flight number
+        :return: flight number
+        """
+        return self._number[2:]
+
+    def airline(self):
+        return self._number[:2]
+
+def main():
+    """
+    Test function
+    :return:
+    """
+    pass
+
+
+
+if __name__ == '__main__':
+    main()
+    exit(0)
