@@ -7,7 +7,7 @@ class Flight:
     """
     A Flight with a particular passenger aircraft
     """
-    def __init__(self, number):
+    def __init__(self, number, aircraft):
         """
         Initializes Flight number
         :param number: flight number
@@ -29,6 +29,10 @@ class Flight:
                              .format(number))
 
         self._number = number
+        self._aircraft = aircraft
+
+        rows, seats = self._aircraft.seatplan()
+        self._seating = [None] + [{letter: None for letter in seats} for _ in rows]
 
     def number(self):
         """
@@ -41,6 +45,8 @@ class Flight:
         return self._number[:2]
 
 
+
+
 class Aircraft:
 
     def __init__(self, registration, model, numrows, seatsper):
@@ -50,8 +56,6 @@ class Aircraft:
         self._seatsper = seatsper
 
 
-        rows, seats = self.seatplan()
-        self._seating = [None] + [{letter:None for letter in seats} for _ in rows]
 
     def registration(self):
         return self._registration
@@ -67,6 +71,8 @@ class Aircraft:
 
     def seatplan(self):
         return(range(1, self._numrows +1), "ABCDEFGHJK"[:self._seatsper])
+
+
 
 
 
