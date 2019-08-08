@@ -23,7 +23,7 @@ def run_take():
     Test the take() function
     """
     items = [2, 4, 6, 8, 10]
-    for item in take(3, items):
+    for item in take(4, items):
         print(item)
 
 
